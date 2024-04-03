@@ -2,6 +2,9 @@
 {
     public static class Util
     {
-        public static double Add(double x, double y) => x + y;
+        public static double Add(double x, double y)
+        {
+            return x + y;
+        }
     }
 }
