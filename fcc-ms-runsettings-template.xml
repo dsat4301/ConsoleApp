@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+    <!-- Configurations that affect the Test Framework (ResultsDirectory and TestAdapterPath are added by FCC - https://github.com/FortuneN/FineCodeCoverage) -->
+    <RunConfiguration>
+        <!-- Use 0 for maximum process-level parallelization. This does not force parallelization within the test DLL (on the thread-level). You can also change it from the Test menu; choose "Run tests in parallel". Unchecked = 1 (only 1), checked = 0 (max). -->
+        <MaxCpuCount>0</MaxCpuCount>
+
+        <!-- true or false -->
+        <!-- Value that specifies the exit code when no tests are discovered -->
+        <TreatNoTestsAsError>true</TreatNoTestsAsError>
+    </RunConfiguration>
+
+    <!-- Configurations for data collectors -->
+    <DataCollectionRunSettings>
+        <DataCollectors>
+
+            <DataCollector friendlyName="Code Coverage" enabled="True">
+                <Configuration>
+                    <CodeCoverage>
+                        <ModulePaths>
+                            <Exclude></Exclude>
+                            <Include>
+                                <ModulePath>ConsoleApp.dll</ModulePath>
+                            </Include>
+                        </ModulePaths>
+                        <Functions>
+                            <Exclude></Exclude>
+                            <Include></Include>
+                        </Functions>
+                        <Attributes>
+                            <Exclude></Exclude>
+                            <Include></Include>
+                        </Attributes>
+                        <Sources>
+                            <Exclude>
+                                <Source>.*xaml.cs</Source>
+                            </Exclude>
+                            <Include></Include>
+                        </Sources>
+                        <CompanyNames>
+                            <Exclude></Exclude>
+                            <Include></Include>
+                        </CompanyNames>
+                        <PublicKeyTokens>
+                            <Exclude></Exclude>
+                            <Include></Include>
+                        </PublicKeyTokens>
+                        <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+                        <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+                        <CollectFromChildProcesses>True</CollectFromChildProcesses>
+                        <CollectAspDotNet>False</CollectAspDotNet>
+                    </CodeCoverage>
+                    <Format>Cobertura</Format>
+                    <FCCGenerated />
+                </Configuration>
+            </DataCollector>
+
+        </DataCollectors>
+    </DataCollectionRunSettings>
+
+</RunSettings>
